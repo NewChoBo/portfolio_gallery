@@ -24,19 +24,21 @@ class HomeScreen extends StatelessWidget {
       bottomNavigationBar: const BottomWidget(),
       body: Column(
         children: [
-          const SizedBox(
-            height: 15,
+          Container(
+            color: Colors.blue,
+            width: double.infinity,
+            child: const SizedBox(
+              height: 20,
+            ),
           ),
           Expanded(
+            flex: 5,
             child: FutureBuilder(
               future: portfolios,
               builder: (context, snapshot) {
                 if (snapshot.hasData) {
                   return Column(
                     children: [
-                      const SizedBox(
-                        height: 50,
-                      ),
                       Expanded(
                         child: makeList(snapshot),
                       ),
@@ -49,8 +51,14 @@ class HomeScreen extends StatelessWidget {
               },
             ),
           ),
-          const Text(
-            '잘 나오는지 확인',
+          Expanded(
+            flex: 1,
+            child: Container(
+              color: Colors.blue,
+              child: const Text(
+                '잘 나오는지 확인',
+              ),
+            ),
           ),
         ],
       ),

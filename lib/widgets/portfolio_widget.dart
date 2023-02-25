@@ -16,9 +16,10 @@ class Portfolio extends StatelessWidget {
       children: [
         Container(
           width: 250,
+          height: 300,
           clipBehavior: Clip.hardEdge,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(20),
               boxShadow: [
                 BoxShadow(
                   blurRadius: 15,
@@ -42,33 +43,3 @@ class Portfolio extends StatelessWidget {
     );
   }
 }
-
-/*
-
-child: Expanded(
-        child: ListView(
-          scrollDirection: Axis.horizontal,
-          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-          children: [
-            Image.asset(
-              'assets/images/example.jpg',
-            ),
-            Image.asset(
-              'assets/images/example1.jpg',
-            ),
-            Image.asset(
-              'assets/images/example.jpg',
-            ),
-            Image.asset(
-              'assets/images/example.jpg',
-            ),
-            Image.asset(
-              'assets/images/example.jpg',
-            ),
-          ],
-        ),
-      ),
-
-
-
-*/

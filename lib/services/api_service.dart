@@ -19,7 +19,6 @@ class ApiService {
         final instance = PortfolioModel.fromJson(portfolio);
         portfolioInstances.add(instance);
       }
-      print(portfolioInstances);
       return portfolioInstances;
     }
     throw Error();
